@@ -58,6 +58,3 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 sudo systemctl enable docker
 sudo systemctl status docker
-
-# Login to the server to be used as master and make sure that the br_netfilter module is loaded
-lsmod | grep br_netfilter
