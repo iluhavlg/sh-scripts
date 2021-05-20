@@ -1,12 +1,17 @@
 #!/bin/bash
 
+K8S_VERSION=1.20.4-00
+# List all available versions
+# curl -s https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages | grep Version | awk '{print $2}'
+
 # Install kubelet, kubeadm and kubectl
 sudo apt update
 sudo apt -y install curl apt-transport-https
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 sudo apt update 
-sudo apt -y install vim git curl wget kubelet kubeadm kubectl 
+sudo apt -y install vim git curl wget
+sudo apt-get install -qy kubelet=$K8S_VERSION kubectl=$K8S_VERSION kubeadm=$K8S_VERSION
 sudo apt-mark hold kubelet kubeadm kubectl
 kubectl version --client && kubeadm version
 
