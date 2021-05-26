@@ -2,7 +2,7 @@
 
 sudo add-apt-repository 'deb http://deb.debian.org/debian buster-backports main'
 apt update
-apt -t buster-backports install linux-image-amd64
+apt -t buster-backports -y install linux-image-amd64
 
 K8S_VERSION=1.20.4-00
 # List all available versions
@@ -67,3 +67,6 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 sudo systemctl enable docker
 sudo systemctl status docker
+
+reboot
+
