@@ -66,7 +66,5 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 sudo systemctl enable docker
-sudo systemctl status docker
-
 reboot
 
