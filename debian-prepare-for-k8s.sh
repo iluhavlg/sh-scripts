@@ -6,7 +6,7 @@ K8S_VERSION=1.20.4-00
 
 # Install kubelet, kubeadm and kubectl
 sudo apt update
-sudo apt -y install curl apt-transport-https
+sudo apt -y install curl apt-transport-https gnupg gnupg1 gnupg2
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 sudo apt update 
