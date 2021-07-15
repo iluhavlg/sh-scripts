@@ -34,7 +34,7 @@ sudo sysctl --system
 # Installing Docker runtime
 sudo apt-get update
 sudo apt-get -y remove docker docker-engine docker.io containerd runc
-sudo apt-get install -y lvm2
+# sudo apt-get install -y lvm2
 sudo apt-get update
 sudo apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common net-tools
 # For Ubuntu
